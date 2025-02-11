@@ -76,7 +76,7 @@ public class EncoderController : MonoBehaviour
 
     private void SwitchText()
     {
-        if (_serialPortReader.isRus)
+        /*if (_serialPortReader.isRus)
         {
             TEXT_RUS.SetActive(true);
             TEXT_TAT.SetActive(false);
@@ -85,7 +85,7 @@ public class EncoderController : MonoBehaviour
         {
             TEXT_RUS.SetActive(false);
             TEXT_TAT.SetActive(true);
-        }
+        }*/
     }
 
     private IEnumerator StartTimer()
