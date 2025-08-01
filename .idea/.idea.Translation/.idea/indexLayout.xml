@@ -4,6 +4,7 @@
     <attachedFolders />
     <explicitIncludes>
       <Path>Library/PackageCache/com.unity.collab-proxy@2.5.2</Path>
+      <Path>Library/PackageCache/com.unity.collab-proxy@2.7.1</Path>
       <Path>Library/PackageCache/com.unity.feature.development@1.0.1</Path>
       <Path>Library/PackageCache/com.unity.modules.ai@1.0.0</Path>
       <Path>Library/PackageCache/com.unity.modules.androidjni@1.0.0</Path>
@@ -38,9 +39,12 @@
       <Path>Library/PackageCache/com.unity.modules.wind@1.0.0</Path>
       <Path>Library/PackageCache/com.unity.modules.xr@1.0.0</Path>
       <Path>Library/PackageCache/com.unity.textmeshpro@3.0.6</Path>
+      <Path>Library/PackageCache/com.unity.textmeshpro@3.0.7</Path>
       <Path>Library/PackageCache/com.unity.timeline@1.7.6</Path>
+      <Path>Library/PackageCache/com.unity.timeline@1.7.7</Path>
       <Path>Library/PackageCache/com.unity.ugui@1.0.0</Path>
       <Path>Library/PackageCache/com.unity.visualscripting@1.9.1</Path>
+      <Path>Library/PackageCache/com.unity.visualscripting@1.9.4</Path>
       <Path>Packages</Path>
       <Path>ProjectSettings</Path>
     </explicitIncludes>
