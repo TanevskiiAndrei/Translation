@@ -34,6 +34,7 @@ public class FadeArray : MonoBehaviour
         }
         fadeCoroutine = StartCoroutine(FadeAllPanels(0f, 1f)); // Плавное появление для всех панелей
     }
+    
     public void FadeOFF()
     {
         if (fadeCoroutine != null)
@@ -41,7 +42,11 @@ public class FadeArray : MonoBehaviour
             StopCoroutine(fadeCoroutine); // Останавливаем текущую корутину
         }
         fadeCoroutine = StartCoroutine(FadeAllPanels(1f, 0f));
-           StartCoroutine(Disactivation());
+        StartCoroutine(Disactivation());
+    }
+    public void FadeOFF_force()
+    {
+        StartCoroutine(FadeAllPanels(1f, 0f));
     }
 
     private IEnumerator Disactivation()
@@ -115,6 +120,29 @@ public class FadeArray : MonoBehaviour
                 Color color = Text[i].GetComponent<Text>().color;
                 color.a = endAlpha;
                 Text[i].GetComponent<Text>().color = color;
+            }
+        }
+    }
+
+    /// <summary>
+    /// Метод мгновенно устанавливает альфу всех элементов массива в 0.
+    /// </summary>
+    public void SetAlphaToZeroInstantly()
+    {
+        foreach (var image in Image)
+        {
+            var imgColor = image.GetComponent<Image>().color;
+            imgColor.a = 0f;
+            image.GetComponent<Image>().color = imgColor;
+        }
+        
+        if (Text != null)
+        {
+            foreach (var textObj in Text)
+            {
+                var txtColor = textObj.GetComponent<Text>().color;
+                txtColor.a = 0f;
+                textObj.GetComponent<Text>().color = txtColor;
             }
         }
     }

@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EncoderController : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class EncoderController : MonoBehaviour
 
     private void Update()
     {
+        
         uiObjects.anchoredPosition = new Vector2(0, _serialPortReader.EncoderValue * moveSpeed);
 
         // Проверка изменения значения энкодера
@@ -65,11 +67,15 @@ public class EncoderController : MonoBehaviour
 
     private void SwitchPanel(GameObject newPanel)
     {
+        // Скрываем предыдущую активную панель перед показом новой
         SelectPanel.SetActive(false);
         currentPanel = newPanel;
         SelectPanel = newPanel;
 
-        SelectPanel.SetActive(true);
+        // Сначала скрываем новую панель сразу же
+        SelectPanel.SetActive(false);
+
+        // Затем включаем анимацию появления
         SelectPanel.GetComponent<FadeArray>().FadeON();
         isPanelFading = false;
     }
